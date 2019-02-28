@@ -1,6 +1,4 @@
-slide_dict = {0:["cat","beach","sun"],1:["selfie","smile"]}
-slides = []
-def get_score(prev_slide_num,next_slide_num):
+def get_score(slide_dict,prev_slide_num,next_slide_num):
     set1,set2 = set(slide_dict[prev_slide_num]),set(slide_dict[next_slide_num])
     return min(len(set1-set2),len(set1&set2),len(set2-set1))
 def input_(fn = ""):
@@ -27,4 +25,4 @@ def input_(fn = ""):
             p+=1
     f.close()
     return horizontal,vertical
-print(input_("test.txt"))
+h,v = input_("test.txt")
