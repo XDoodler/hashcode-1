@@ -24,7 +24,10 @@ def maximize(images):
         frames.append([l[i], l[i+1], score])
     return frames
 def sort_by_score(d):
-    return np.array(d).view('i8,i8,i8').sort(order = ["f2"],axis = 0)
+    n = -np.array(d)
+    n.view('i8,i8,i8').sort(order = ["f2"],axis = 0)
+    n = -n
+    return n
 def arrange(v,h):
     vl = sort_by_score(maximize(v))
     
