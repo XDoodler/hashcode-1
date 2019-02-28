@@ -12,4 +12,8 @@ def brute_force(horizontal, vertical):
             l = 0
             frame.append(f)
             f = []
-    return frame
+    print(len(frame))
+    for items in frame:
+        for item in items:
+            print(item, end = '')
+        print()
