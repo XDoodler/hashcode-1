@@ -12,3 +12,4 @@ def brute_force(horizontal, vertical):
             l = 0
             frame.append(f)
             f = []
+    return frame
