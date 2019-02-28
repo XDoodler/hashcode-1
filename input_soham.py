@@ -19,9 +19,9 @@ while(testcase):
     for i in range(2,len(photo)):
       b.append(photo[i])
 
-    vertical[q]=b
+    vertical[p]=b
     b=[]
-    q+=1
+    p+=1
 
 print(horizontal)
 print(vertical)
