@@ -11,7 +11,5 @@ def input_():
         hv = inp[0]
         tags = inp[-int(inp[1]):]
         photos[i] = [hv,tags]
-    print(photos)
-print(input_())
+    return (photos)
 
-    
