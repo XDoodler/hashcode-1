@@ -15,22 +15,39 @@ def maximize(images):
     """
     frames = []
     l = []
-    for item in dict:
+    for item in images:
         l.append(item)
-    if l%2 == 1:
+    if len(l)%2 == 1:
         del(l[-1])
     for i in range(0, len(l), 2):
         score = get_score(images, l[i], l[i+1])
         frames.append([l[i], l[i+1], score])
     return frames
 def sort_by_score(d):
-    n = -np.array(d)
+    n = np.array(d)
     n.view('i8,i8,i8').sort(order = ["f2"],axis = 0)
-    n = -n
-    return n
+    n = n
+    return n.tolist()
 def arrange(v,h):
     vl = sort_by_score(maximize(v))
-    
+    vd = {}
+    vd_ = {}
+    idx = 0
+    for id1,id2,score in vl:
+        vd["T%d"%idx] = list(set(v[id1]+v[id2]))
+        vd_["T%d"%idx] = [id1,id2]
+        idx+=1
+    h.update(vd) 
+    vf = sort_by_score(maximize(h))
+    print(maximize(h))
+    l = []
+    for k in vf:
+        for K in k[:-1]:
+            if type(K) == type(""):
+                l.append(vd_[K])
+            else:
+                l.append(K)
+    print(l)
 def brute_force(horizontal, vertical):
     frame = []
     for item_id in horizontal:
@@ -76,4 +93,4 @@ def input_(fn = ""):
     f.close()
     return horizontal,vertical
 h,v = input_(sys.argv[1])
-brute_force(h,v)
+arrange(h,v)
