@@ -5,7 +5,7 @@ def maximize(images):
     """
     frames = []
     l = []
-    for item in dict:
+    for item in images:
         l.append(item)
     if l%2 == 1:
         del(l[-1])
