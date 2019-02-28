@@ -1,3 +1,3 @@
-# hashcode
+# hashcode '19
 
-GET LOSTTTT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Final Score: 303,788
