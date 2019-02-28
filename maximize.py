@@ -1,7 +1,7 @@
 def maximize(images):
     """
     dict: {0:["tag1","tag2"], 1:["tag3","tag4"]}
-    returns {"ID1-ID2":score1, "ID2-ID3":score2}
+    returns [[ID1, ID2, score1], [ID2, ID3, score2]]
     """
     frames = []
     l = []
