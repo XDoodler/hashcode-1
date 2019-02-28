@@ -1,6 +1,12 @@
 def get_score(slide_dict,prev_slide_num,next_slide_num):
     set1,set2 = set(slide_dict[prev_slide_num]),set(slide_dict[next_slide_num])
     return min(len(set1-set2),len(set1&set2),len(set2-set1))
+
+#
+#def maximize(dict):
+#   dict: {0:["tag1","tag2"],1:["tag3","tag4"]}
+#   returns {"ID1-ID2":score1, "ID2-ID3":score2}
+
 def input_(fn = ""):
     f = open(fn,"r")
     testcase = int(f.readline())
