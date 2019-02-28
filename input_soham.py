@@ -32,6 +32,7 @@ H 3 cat beach sun
 V 2 selfie smile
 V 2 garden selfie
 H 2 garden cat
-{0: ['cat', 'beach', 'sun'], 1: ['garden', 'cat']}
-{0: ['selfie', 'smile'], 1: ['garden', 'selfie']}
+{0: ['cat', 'beach', 'sun'], 3: ['garden', 'cat']}
+{1: ['selfie', 'smile'], 2: ['garden', 'selfie']}
+
 '''
