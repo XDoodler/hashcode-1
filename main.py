@@ -9,7 +9,7 @@ def input_():
     for i in range(n):
         inp = input().strip().split()
         hv = inp[0]
-        tags = inp[-int(inp[1])]
+        tags = inp[-int(inp[1]):]
         photos[i] = [hv,tags]
     print(photos)
 print(input_())
